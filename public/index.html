@@ -23,11 +23,11 @@
         }
         header img {
             max-width: 300px;
-            height: auto;
+            height: 100px;
         }
         h1 {
             color: #d4af37;
-            margin-top: 10px;
+            margin-top: 5px;
         }
         ul {
             list-style-type: none;
@@ -40,46 +40,67 @@
             margin: 10px 0;
             padding: 15px;
             border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
+
+        li:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+        }
+
         a {
             text-decoration: none;
             color: #1f2937;
             font-weight: bold;
+            transition: color 0.2s ease;
         }
         a:hover {
             text-decoration: underline;
+            color: #2b94c5; /* Optional: slight color pop */
         }
+        
         .stamp {
             position: fixed;
             bottom: 10px;
             right: 10px;
-            background-color: #ffffff;
             padding: 5px 10px;
             border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            font-size: 12px;
-            color: #1f2937;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
+
+        .stamp:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+        }
+
+        .stamp img {
+            max-width: 120px;
+            display: block;
+            opacity: 1;
+        }
+
     </style>
 </head>
 <body>
     <header>
-        <img src="https://www.sthildas.wa.edu.au/wp-content/themes/sthildas/images/logos/sthildas-2023.svg" alt="St. Hilda's School Logo">
-        <h1>DC Enviro - Periodicals Tracking</h1>
+        <img src="/sthildas-logo.svg" alt="St. Hilda's School Logo">
+        <h1>Periodicals Tracking</h1>
     </header>
+
     <ul>
-        <li><a href="https://docs.google.com/spreadsheets/d/1uPg4TG5qS3HCOU7bHJyJxHrWWuZfEOeKdHIUyHmLz8w/edit?usp=sharing" target="_blank">2025 - April - School Holidays</a></li>
+        <li><a href="https://docs.google.com/spreadsheets/d/1uPg4TG5qS3HCOU7bHJyJxHrWWuZfEOeKdHIUyHmLz8w/edit?usp=sharing" target="_blank">2025 - Term 1 Break</a></li>
         <li><a href="https://docs.google.com/spreadsheets/d/1VawrmUQcPsfEdZ20JG_bZ0fzshwjrJ8RRzVUjOI9SDs/edit?usp=sharing" target="_blank">2024/2025 - Dec/Jan - School Holidays</a></li>
         <li><a href="https://docs.google.com/spreadsheets/d/1LReCtDbVY2EaBzVvKbJa4rv-dbE0EIO1oLMV1lNzIT0/edit?usp=sharing" target="_blank">2024 - Full Year</a></li>       
     </ul>
-    <div class="stamp">
-        Created by Gustavo Grisosti - <span id="date"></span>
+
+     <div class="stamp">
+        <a href="https://www.dcenviro.com.au/" target="_blank">
+            <img src="/dclogo.png" alt="DC Enviro Logo">
+        </a>
     </div>
-    <script>
-        const dateElement = document.getElementById("date");
-        const currentDate = new Date().toLocaleDateString();
-        dateElement.textContent = currentDate;
-    </script>
+   
 </body>
 </html>
